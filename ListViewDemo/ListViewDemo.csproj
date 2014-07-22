@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{0540AE1A-0CCC-4825-BF26-CC090857C56C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ListViewDemo</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>ListViewDemo</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Speakers.cs" />
+    <Compile Include="Model\Speaker.cs" />
+    <Compile Include="MenuActivity.cs" />
+    <Compile Include="Activities\ActivityListItem\ActivityListItemActivity.cs" />
+    <Compile Include="Activities\SimpleListItem1\SimpleListItem1Activity.cs" />
+    <Compile Include="Activities\SimpleListItem1\SimpleListItem1Adapter.cs" />
+    <Compile Include="Activities\SimpleListItem2\SimpleListItem2Activity.cs" />
+    <Compile Include="Activities\SimpleListItem2\SimpleListItem2Adapter.cs" />
+    <Compile Include="Activities\SimpleListItemActivated1\SimpleListItemActivated1Adapter.cs" />
+    <Compile Include="Activities\SimpleListItemActivated1\SimpleListItemActivated1Activity.cs" />
+    <Compile Include="Activities\SimpleExandableListItem1\SimpleExandableListItem1Activity.cs" />
+    <Compile Include="Activities\SimpleExandableListItem2\SimpleExandableListItem2Activity.cs" />
+    <Compile Include="Activities\SimpleListItemActivated2\SimpleListItemActivated2Activity.cs" />
+    <Compile Include="Activities\SimpleListItemChecked\SimpleListItemCheckedActivity.cs" />
+    <Compile Include="Activities\SimpleListItemMultipleChoice\SimpleListItemMultipleChoiceActivity.cs" />
+    <Compile Include="Activities\SimpleListItemSingleChoice\SimpleListItemSingleChoiceActivity.cs" />
+    <Compile Include="Activities\SimpleSelectableListItem\SimpleSelectableListItemActivity.cs" />
+    <Compile Include="Activities\TestListItem\TestListItemActivity.cs" />
+    <Compile Include="Activities\TwoLineListItem\TwoLineListItemActivity.cs" />
+    <Compile Include="Activities\SimpleListItemActivated2\SimpleListItemActivated2Adapter.cs" />
+    <Compile Include="Activities\SimpleExandableListItem1\SimpleExandableListItem1Adapter.cs" />
+    <Compile Include="Activities\SimpleExandableListItem2\SimpleExandableListItem2Adapter.cs" />
+    <Compile Include="Activities\SimpleListItemChecked\SimpleListItemCheckedAdapter.cs" />
+    <Compile Include="Activities\SimpleListItemMultipleChoice\SimpleListItemMultipleChoiceAdapter.cs" />
+    <Compile Include="Activities\SimpleListItemSingleChoice\SimpleListItemSingleChoiceAdapter.cs" />
+    <Compile Include="Activities\SimpleSelectableListItem\SimpleSelectableListItemAdapter.cs" />
+    <Compile Include="Activities\TestListItem\TestListItemAdapter.cs" />
+    <Compile Include="Activities\TwoLineListItem\TwoLineListItemAdapter.cs" />
+    <Compile Include="Activities\ActivityListItem\ActivityListItemAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Activities\ActivityListItem\" />
+    <Folder Include="Activities\SimpleListItem1\" />
+    <Folder Include="Activities\SimpleListItem2\" />
+    <Folder Include="Activities\SimpleListItemActivated1\" />
+    <Folder Include="Activities\SimpleExandableListItem1\" />
+    <Folder Include="Activities\SimpleExandableListItem2\" />
+    <Folder Include="Activities\SimpleListItemActivated2\" />
+    <Folder Include="Activities\SimpleListItemChecked\" />
+    <Folder Include="Activities\SimpleListItemMultipleChoice\" />
+    <Folder Include="Activities\SimpleListItemSingleChoice\" />
+    <Folder Include="Activities\SimpleSelectableListItem\" />
+    <Folder Include="Activities\TestListItem\" />
+    <Folder Include="Activities\TwoLineListItem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\images\speakers\aaron.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\ananth.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\bob.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\chris.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\dave.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\david.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\dean.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\demis.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\don.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\frank.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\greg.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\igor.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\jared.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\jb.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\jeremie.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\jeroen.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\john_bubriski.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\john_zablocki.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\jonathan.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\louis.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\michael.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\miguel.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\paul.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\phil.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\sam.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\scott.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\somya.jpg" />
+    <AndroidAsset Include="Assets\images\speakers\steve.jpg" />
+  </ItemGroup>
+</Project>
