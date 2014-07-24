@@ -4,9 +4,6 @@ using Android.OS;
 
 namespace ListViewDemo
 {
-	/// <summary>
-	/// Activity list item activity.
-	/// </summary>
 	[Activity (Label = "ActivityListItem")]
 	public class ActivityListItemActivity : ListActivity
 	{
@@ -15,9 +12,9 @@ namespace ListViewDemo
 			//Includes icon, text1
 			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
-			var adapter = new ActivityListItemAdapter (this, speakers);
+			var adapter = new ActivityListItemAdapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}

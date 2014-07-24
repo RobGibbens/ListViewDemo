@@ -6,14 +6,14 @@ namespace ListViewDemo
 	[Activity (Label = "SimpleListItem1")]
 	public class SimpleListItem1Activity : ListActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
-			var adapter = new SimpleListItem1Adapter (this, speakers);
+			var adapter = new SimpleListItem1Adapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}

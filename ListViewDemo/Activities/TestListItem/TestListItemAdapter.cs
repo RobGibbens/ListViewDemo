@@ -1,56 +1,49 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ListViewDemo
 {
-
-	public class TestListItemAdapter: BaseAdapter<Speaker>
+	public class TestListItemAdapter: BaseAdapter<Kitten>
 	{
-		private readonly List<Speaker> _speakers;
+		private readonly List<Kitten> _kittens;
 		private readonly Activity _activity;
 
-		public TestListItemAdapter(Activity activity, IEnumerable<Speaker> speakers)
+		public TestListItemAdapter (Activity activity, IEnumerable<Kitten> kittens)
 		{
-			_speakers = speakers.OrderBy(s => s.Name).ToList();
+			_kittens = kittens.OrderBy (s => s.Name).ToList ();
 			_activity = activity;
 		}
 
-		public override long GetItemId(int position)
+		public override long GetItemId (int position)
 		{
 			return position;
 		}
 
-		public override Speaker this [int index] {
-			get { return _speakers[index]; }
+		public override Kitten this [int index] {
+			get { return _kittens [index]; }
 		}
 
 		public override int Count {
-			get { return _speakers.Count; }
+			get { return _kittens.Count; }
 		}
 
-		public override View GetView(int position, View convertView, ViewGroup parent)
+		public override View GetView (int position, View convertView, ViewGroup parent)
 		{
 			var view = convertView;
 
 			if (view == null) {
-				view = _activity.LayoutInflater.Inflate(Android.Resource.Layout.TestListItem, null);
+				view = _activity.LayoutInflater.Inflate (Android.Resource.Layout.TestListItem, null);
 			}
 
-			var speaker = _speakers[position];
+			var kitten = _kittens [position];
 
-			TextView textView = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-			textView.Text = speaker.Name;
+			TextView textView = view.FindViewById<TextView> (Android.Resource.Id.Text1);
+			textView.Text = kitten.Name;
 
 			return view;
 		}
 	}
-
 }

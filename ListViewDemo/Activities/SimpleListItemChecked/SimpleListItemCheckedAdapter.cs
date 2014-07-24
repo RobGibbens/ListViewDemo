@@ -1,25 +1,19 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ListViewDemo
 {
-	
-	public class SimpleListItemCheckedAdapter: BaseAdapter<Speaker>
+	public class SimpleListItemCheckedAdapter: BaseAdapter<Kitten>
 	{
-		private readonly List<Speaker> _speakers;
+		private readonly List<Kitten> _kittens;
 		private readonly Activity _activity;
 
-		public SimpleListItemCheckedAdapter(Activity activity, IEnumerable<Speaker> speakers)
+		public SimpleListItemCheckedAdapter(Activity activity, IEnumerable<Kitten> kittens)
 		{
-			_speakers = speakers.OrderBy(s => s.Name).ToList();
+			_kittens = kittens.OrderBy(s => s.Name).ToList();
 			_activity = activity;
 		}
 
@@ -28,12 +22,12 @@ namespace ListViewDemo
 			return position;
 		}
 
-		public override Speaker this [int index] {
-			get { return _speakers[index]; }
+		public override Kitten this [int index] {
+			get { return _kittens[index]; }
 		}
 
 		public override int Count {
-			get { return _speakers.Count; }
+			get { return _kittens.Count; }
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
@@ -44,10 +38,10 @@ namespace ListViewDemo
 				view = _activity.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemChecked, null);
 			}
 
-			var speaker = _speakers[position];
+			var kitten = _kittens[position];
 
 			TextView textView = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-			textView.Text = speaker.Name;
+			textView.Text = kitten.Name;
 
 			return view;
 		}

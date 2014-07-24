@@ -1,7 +1,6 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
@@ -13,14 +12,14 @@ namespace ListViewDemo
 	{
 		string[] _menuItems;
 
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
 			_menuItems = new string[] { 
 				"ActivityListItem", 
-				"SimpleExandableListItem1", 
-				"SimpleExandableListItem2",
+				//"SimpleExandableListItem1", 
+				//"SimpleExandableListItem2",
 				"SimpleListItem1",
 				"SimpleListItem2",
 				"SimpleListItemActivated1",
@@ -28,7 +27,7 @@ namespace ListViewDemo
 				"SimpleListItemChecked",
 				"SimpleListItemMultipleChoice",
 				"SimpleListItemSingleChoice",
-				"SimpleSelectableListItem",
+				//"SimpleSelectableListItem",
 				"TestListItem",
 				"TwoLineListItem"
 			};

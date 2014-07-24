@@ -1,21 +1,24 @@
 using Android.App;
 using Android.OS;
+using Android.Widget;
 
 namespace ListViewDemo
 {
 	[Activity (Label = "SimpleExandableListItem1")]
-	public class SimpleExandableListItem1Activity : ListActivity
+	public class SimpleExandableListItem1Activity : ExpandableListActivity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1
 			base.OnCreate (savedInstanceState);
 
+			//var listView = new ExpandableListActivity
+
 			var speakers = Speakers.GetSpeakerData ();
 
-			var adapter = new SimpleExandableListItem1Adapter (this, speakers);
+			var adapter = new SimpleExpandableListItem1Adapter (this, speakers);
 
-			this.ListAdapter = adapter;
+			this.ExpandableListAdapter = adapter;
 		}
 	}
 }

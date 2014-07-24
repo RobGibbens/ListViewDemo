@@ -1,8 +1,4 @@
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 
@@ -11,16 +7,16 @@ namespace ListViewDemo
 	[Activity (Label = "SimpleListItemActivated2")]
 	public class SimpleListItemActivated2Activity : ListActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1, text2
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
 			this.ListView.ChoiceMode = ChoiceMode.Multiple;
 
-			var adapter = new SimpleListItemActivated2Adapter (this, speakers);
+			var adapter = new SimpleListItemActivated2Adapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}

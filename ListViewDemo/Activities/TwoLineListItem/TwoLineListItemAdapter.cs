@@ -1,54 +1,50 @@
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ListViewDemo
 {
-	public class TwoLineListItemAdapter: BaseAdapter<Speaker>
+	public class TwoLineListItemAdapter: BaseAdapter<Kitten>
 	{
-		private readonly List<Speaker> _speakers;
+		private readonly List<Kitten> _kittens;
 		private readonly Activity _activity;
 
-		public TwoLineListItemAdapter(Activity activity, IEnumerable<Speaker> speakers)
+		public TwoLineListItemAdapter (Activity activity, IEnumerable<Kitten> kittens)
 		{
-			_speakers = speakers.OrderBy(s => s.Name).ToList();
+			_kittens = kittens.OrderBy (s => s.Name).ToList ();
 			_activity = activity;
 		}
 
-		public override long GetItemId(int position)
+		public override long GetItemId (int position)
 		{
 			return position;
 		}
 
-		public override Speaker this [int index] {
-			get { return _speakers[index]; }
+		public override Kitten this [int index] {
+			get { return _kittens [index]; }
 		}
 
 		public override int Count {
-			get { return _speakers.Count; }
+			get { return _kittens.Count; }
 		}
 
-		public override View GetView(int position, View convertView, ViewGroup parent)
+		public override View GetView (int position, View convertView, ViewGroup parent)
 		{
 			var view = convertView;
 
 			if (view == null) {
-				view = _activity.LayoutInflater.Inflate(Android.Resource.Layout.TwoLineListItem, null);
+				view = _activity.LayoutInflater.Inflate (Android.Resource.Layout.TwoLineListItem, null);
 			}
 
-			var speaker = _speakers[position];
+			var kitten = _kittens [position];
 
-			TextView text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-			text1.Text = speaker.Name;
+			TextView text1 = view.FindViewById<TextView> (Android.Resource.Id.Text1);
+			text1.Text = kitten.Name;
 
-			TextView text2 = view.FindViewById<TextView>(Android.Resource.Id.Text2);
-			text2.Text = speaker.Company;
+			TextView text2 = view.FindViewById<TextView> (Android.Resource.Id.Text2);
+			text2.Text = kitten.Breed;
 
 			return view;
 		}

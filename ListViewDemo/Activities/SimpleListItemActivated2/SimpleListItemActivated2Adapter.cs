@@ -11,14 +11,14 @@ using System.Linq;
 
 namespace ListViewDemo
 {
-	public class SimpleListItemActivated2Adapter: BaseAdapter<Speaker>
+	public class SimpleListItemActivated2Adapter: BaseAdapter<Kitten>
 	{
-		private readonly List<Speaker> _speakers;
+		private readonly List<Kitten> _kittens;
 		private readonly Activity _activity;
 
-		public SimpleListItemActivated2Adapter(Activity activity, IEnumerable<Speaker> speakers)
+		public SimpleListItemActivated2Adapter(Activity activity, IEnumerable<Kitten> kittens)
 		{
-			_speakers = speakers.OrderBy(s => s.Name).ToList();
+			_kittens = kittens.OrderBy(s => s.Name).ToList();
 			_activity = activity;
 		}
 
@@ -27,12 +27,12 @@ namespace ListViewDemo
 			return position;
 		}
 
-		public override Speaker this [int index] {
-			get { return _speakers[index]; }
+		public override Kitten this [int index] {
+			get { return _kittens[index]; }
 		}
 
 		public override int Count {
-			get { return _speakers.Count; }
+			get { return _kittens.Count; }
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
@@ -43,13 +43,13 @@ namespace ListViewDemo
 				view = _activity.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemActivated2, null);
 			}
 
-			var speaker = _speakers[position];
+			var kitten = _kittens[position];
 
 			TextView text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-			text1.Text = speaker.Name;
+			text1.Text = kitten.Name;
 
 			TextView text2 = view.FindViewById<TextView>(Android.Resource.Id.Text2);
-			text2.Text = speaker.Company;
+			text2.Text = kitten.Breed;
 
 			return view;
 		}

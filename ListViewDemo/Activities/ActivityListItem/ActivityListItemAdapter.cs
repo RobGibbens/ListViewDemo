@@ -8,14 +8,14 @@ using System;
 
 namespace ListViewDemo
 {
-	public class ActivityListItemAdapter: BaseAdapter<Speaker>
+	public class ActivityListItemAdapter: BaseAdapter<Kitten>
 	{
-		private readonly List<Speaker> _speakers;
+		private readonly List<Kitten> _kittens;
 		private readonly Activity _activity;
 
-		public ActivityListItemAdapter (Activity activity, IEnumerable<Speaker> speakers)
+		public ActivityListItemAdapter (Activity activity, IEnumerable<Kitten> kittens)
 		{
-			_speakers = speakers.OrderBy (s => s.Name).ToList ();
+			_kittens = kittens.OrderBy (s => s.Name).ToList ();
 			_activity = activity;
 		}
 
@@ -24,12 +24,12 @@ namespace ListViewDemo
 			return position;
 		}
 
-		public override Speaker this [int index] {
-			get { return _speakers [index]; }
+		public override Kitten this [int index] {
+			get { return _kittens [index]; }
 		}
 
 		public override int Count {
-			get { return _speakers.Count; }
+			get { return _kittens.Count; }
 		}
 
 		public override View GetView (int position, View convertView, ViewGroup parent)
@@ -40,23 +40,23 @@ namespace ListViewDemo
 				view = _activity.LayoutInflater.Inflate (Android.Resource.Layout.ActivityListItem, null);
 			}
 
-			var speaker = _speakers [position];
+			var kitten = _kittens [position];
 
 			TextView text1 = view.FindViewById<TextView> (Android.Resource.Id.Text1);
-			text1.Text = speaker.Name;
+			text1.Text = kitten.Name;
 
-			ImageView imageView = view.FindViewById<ImageView>(Android.Resource.Id.Icon);
+			ImageView imageView = view.FindViewById<ImageView> (Android.Resource.Id.Icon);
 			if (imageView != null)
-				imageView.SetImageDrawable(GetHeadShot(speaker.HeadshotUrl));
+				imageView.SetImageDrawable (GetHeadShot (kitten.ImageUrl));
 
 			return view;
 		}
 
-		private Drawable GetHeadShot(string url)
+		private Drawable GetHeadShot (string url)
 		{
 			Drawable headshotDrawable = null;
 			try {
-				headshotDrawable = Drawable.CreateFromStream(_activity.Assets.Open(url), null);
+				headshotDrawable = Drawable.CreateFromStream (_activity.Assets.Open (url), null);
 			} catch (Exception ex) {
 				headshotDrawable = null;
 			}

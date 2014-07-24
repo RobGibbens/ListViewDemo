@@ -1,26 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ListViewDemo/Activities/SimpleExandableListItem1/SimpleExandableListItem1Activity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ListViewDemo/MenuActivity.cs">
     <Files>
-      <File FileName="ListViewDemo/Activities/SimpleListItemChecked/SimpleListItemCheckedActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleListItemMultipleChoice/SimpleListItemMultipleChoiceActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleListItemSingleChoice/SimpleListItemSingleChoiceActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleSelectableListItem/SimpleSelectableListItemActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/TestListItem/TestListItemActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/TwoLineListItem/TwoLineListItemActivity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleListItemActivated1/SimpleListItemActivated1Activity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleListItemActivated2/SimpleListItemActivated2Activity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/ActivityListItem/ActivityListItemActivity.cs" Line="7" Column="15" />
-      <File FileName="ListViewDemo/Activities/SimpleExandableListItem1/SimpleExandableListItem1Activity.cs" Line="19" Column="4" />
-      <File FileName="ListViewDemo/Activities/SimpleExandableListItem1/SimpleExandableListItem1Adapter.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/ActivityListItem/ActivityListItemAdapter.cs" Line="8" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleExandableListItem2/SimpleExandableListItem2Activity.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleExandableListItem2/SimpleExandableListItem2Adapter.cs" Line="1" Column="1" />
-      <File FileName="ListViewDemo/Activities/SimpleListItem1/SimpleListItem1Activity.cs" Line="19" Column="4" />
+      <File FileName="ListViewDemo/Activities/SimpleExandableListItem1/SimpleExandableListItem1Activity.cs" Line="14" Column="4" />
+      <File FileName="ListViewDemo/MenuActivity.cs" Line="12" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ListViewDemo MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>

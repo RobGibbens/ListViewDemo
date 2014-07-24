@@ -1,28 +1,22 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
 
 namespace ListViewDemo
 {
-
 	[Activity (Label = "SimpleListItemChecked")]
 	public class SimpleListItemCheckedActivity : ListActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
 			this.ListView.ChoiceMode = ChoiceMode.Multiple;
 
-			var adapter = new SimpleListItemCheckedAdapter (this, speakers);
+			var adapter = new SimpleListItemCheckedAdapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}

@@ -1,32 +1,24 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 
 namespace ListViewDemo
 {
-
 	[Activity (Label = "SimpleSelectableListItem")]
 	public class SimpleSelectableListItemActivity : ListActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
 			this.ListView.ChoiceMode = ChoiceMode.MultipleModal;
 
-			var adapter = new SimpleSelectableListItemAdapter (this, speakers);
+			var adapter = new SimpleSelectableListItemAdapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}
 	}
-
-
 }

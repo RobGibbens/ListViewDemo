@@ -1,29 +1,21 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace ListViewDemo
 {
-
 	[Activity (Label = "TwoLineListItem")]
 	public class TwoLineListItemActivity : ListActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			//Includes text1, text2
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			var speakers = Speakers.GetSpeakerData ();
+			var kittens = Kittens.GetKittens ();
 
-			var adapter = new TwoLineListItemAdapter (this, speakers);
+			var adapter = new TwoLineListItemAdapter (this, kittens);
 
 			this.ListAdapter = adapter;
 		}
 	}
-
 }
