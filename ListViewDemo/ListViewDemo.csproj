@@ -58,19 +58,18 @@
     <Compile Include="Activities\SimpleListItemChecked\SimpleListItemCheckedActivity.cs" />
     <Compile Include="Activities\SimpleListItemMultipleChoice\SimpleListItemMultipleChoiceActivity.cs" />
     <Compile Include="Activities\SimpleListItemSingleChoice\SimpleListItemSingleChoiceActivity.cs" />
-    <Compile Include="Activities\SimpleSelectableListItem\SimpleSelectableListItemActivity.cs" />
     <Compile Include="Activities\TestListItem\TestListItemActivity.cs" />
     <Compile Include="Activities\TwoLineListItem\TwoLineListItemActivity.cs" />
     <Compile Include="Activities\SimpleListItemActivated2\SimpleListItemActivated2Adapter.cs" />
     <Compile Include="Activities\SimpleListItemChecked\SimpleListItemCheckedAdapter.cs" />
     <Compile Include="Activities\SimpleListItemMultipleChoice\SimpleListItemMultipleChoiceAdapter.cs" />
     <Compile Include="Activities\SimpleListItemSingleChoice\SimpleListItemSingleChoiceAdapter.cs" />
-    <Compile Include="Activities\SimpleSelectableListItem\SimpleSelectableListItemAdapter.cs" />
     <Compile Include="Activities\TestListItem\TestListItemAdapter.cs" />
     <Compile Include="Activities\TwoLineListItem\TwoLineListItemAdapter.cs" />
     <Compile Include="Activities\ActivityListItem\ActivityListItemAdapter.cs" />
     <Compile Include="Model\Kitten.cs" />
     <Compile Include="Model\Kittens.cs" />
+    <Compile Include="Activities\ExampleActivity\ExampleActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -96,10 +95,10 @@
     <Folder Include="Activities\SimpleListItemChecked\" />
     <Folder Include="Activities\SimpleListItemMultipleChoice\" />
     <Folder Include="Activities\SimpleListItemSingleChoice\" />
-    <Folder Include="Activities\SimpleSelectableListItem\" />
     <Folder Include="Activities\TestListItem\" />
     <Folder Include="Activities\TwoLineListItem\" />
     <Folder Include="Assets\images\kittens\" />
+    <Folder Include="Activities\ExampleActivity\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\images\kittens\01.jpg" />

@@ -17,6 +17,7 @@ namespace ListViewDemo
 			base.OnCreate (savedInstanceState);
 
 			_menuItems = new string[] { 
+				"ExampleActivity",
 				"ActivityListItem", 
 				//"SimpleExandableListItem1", 
 				//"SimpleExandableListItem2",

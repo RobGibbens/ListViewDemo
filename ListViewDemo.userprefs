@@ -1,9 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ListViewDemo/MenuActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ListViewDemo/Activities/TestListItem/TestListItemActivity.cs">
     <Files>
-      <File FileName="ListViewDemo/Activities/SimpleExandableListItem1/SimpleExandableListItem1Activity.cs" Line="14" Column="4" />
-      <File FileName="ListViewDemo/MenuActivity.cs" Line="12" Column="14" />
+      <File FileName="ListViewDemo/MenuActivity.cs" Line="26" Column="11" />
+      <File FileName="ListViewDemo/Activities/ActivityListItem/ActivityListItemActivity.cs" Line="12" Column="26" />
+      <File FileName="ListViewDemo/Activities/SimpleListItem1/SimpleListItem1Activity.cs" Line="21" Column="2" />
+      <File FileName="ListViewDemo/Activities/ExampleActivity/ExampleActivity.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleListItem2/SimpleListItem2Activity.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleListItemActivated1/SimpleListItemActivated1Activity.cs" Line="17" Column="50" />
+      <File FileName="ListViewDemo/Activities/SimpleListItemActivated1/SimpleListItemActivated1Adapter.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleListItemChecked/SimpleListItemCheckedActivity.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleListItemMultipleChoice/SimpleListItemMultipleChoiceActivity.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleListItemSingleChoice/SimpleListItemSingleChoiceActivity.cs" Line="1" Column="1" />
+      <File FileName="ListViewDemo/Activities/SimpleSelectableListItem/SimpleSelectableListItemActivity.cs" Line="8" Column="47" />
+      <File FileName="ListViewDemo/Activities/TestListItem/TestListItemActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
